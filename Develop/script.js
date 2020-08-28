@@ -5,8 +5,9 @@ var todayDate = function() {
 };
 
 //checks to see if time slots have passed/are current/or in the future
+var currentHour = moment().hour();
 var auditTimes = function() {
-    var currentHour = moment().hour();
+    
     $('.time-block').each(function(){
         var hour = parseInt($(this).attr('id'));
 
@@ -40,7 +41,7 @@ $('.container .locked').on('click', function() {
 });
 
 
-
+//loads tasks to correct slot
 var loadTasks = function() {
     var nineContent =  localStorage.getItem('09')
     var tenContent =  localStorage.getItem('010')
@@ -92,6 +93,10 @@ var loadTasks = function() {
 }
 
 
+//clears tasks at midnight
+if (currentHour === 0) {
+    localStorage.clear()
+}
 
 //updates time when the page loads then every 60 seconds
 todayDate();

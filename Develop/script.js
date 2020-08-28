@@ -22,12 +22,26 @@ var auditTimes = function() {
     })
 }
 
+//save
 $('.container .locked').on('click', function() {
-    console.log(this)
-    //have variable to get ID of button clicked
-    //have function to save text area with matching id 
+    //gets id of button
+    var btnId = $(this).attr('id')
+    console.log(btnId)
+
+    //gets text area of button pressed
+    var txtContent = $('#txt-' + btnId).val().trim()
+    console.log(txtContent)
+
+    
+
+    localStorage.setItem(btnId, txtContent)
+    
 
 });
+
+var loadTasks = function() {
+
+}
 
 
 

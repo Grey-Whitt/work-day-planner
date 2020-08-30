@@ -25,4 +25,4 @@ Some HTML and CSS were provided.
 ## Here is what the page looks like
 ![Full site](https://github.com/Grey-Whitt/work-day-planner/blob/master/Develop/fullsite.png)
 
-![See It Here](https://grey-whitt.github.io/work-day-planner)
+[See It Here](https://grey-whitt.github.io/work-day-planner)
